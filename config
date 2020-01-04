@@ -1,0 +1,11 @@
+version:2
+references:
+  # Default container configurations
+  docker_config: &docker_config
+    docker:
+      - image: circleci/php:7.0-node-browsers
+jobs:
+  build:
+    <<: *docker_config
+    steps:
+      - checkout
